@@ -213,6 +213,7 @@ class FlutterPolls extends HookWidget {
   Widget build(BuildContext context) {
     final hasPollEnded = useState(pollEnded);
     final userHasVoted = useState(hasVoted);
+    userHasVoted.value = hasVoted;
     final isLoading = useState(_isloading);
     final votedOption = useState<PollOption?>(hasVoted == false
         ? null
